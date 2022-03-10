@@ -13,8 +13,8 @@ for i in range(port1, port2):
 	try:
 		if s.connect_ex((ip, i)) == 0:
 			print(f"Port {i} is open")
-			service = socket.getservbyport(i, "tcp")
-			print(f"service {service} running on port {i}")
+			servico = socket.getservbyport(i, "tcp")
+			print(f"Serviço {servico} rodando na Porta {i}")
 	except:
 		pass
 	s.close()
