@@ -63,38 +63,44 @@ CVE-2010-1169   8.5     https://vulners.com/cve/CVE-2010-1169
 
 1.1h) 
 
-a)
+a) 104.16.44.99
 
-![alt_text](imgs/1-1h.png)
-
-
-b) 
-
-![alt_text](imgs/9.png)
+![alt_text](imgs/1-1ha.png)
 
 
-c) 
+b) CloudFlare, mostrado no comando acima e no abaixo
 
-![alt_text](imgs/10.png)
+![alt_text](imgs/1-1hb.png)
+
+
+c) Sim, há um servidor de email no domínio: mail.ietf.org no IP 4.31.198.44 
+
+Os dados foram pegos utilizando o site IPOk (https://ipok.com.br/tools.php?valor=ietf.org&tool=info) e NetCraft(https://sitereport.netcraft.com/?url=mail.ietf.org)
 
 
 1.1i) 
 
-a)
-
-![alt_text](imgs/11.png)
+a) Site escolhido: www.rodolfoavelino.com.br
 
 
-b) 
-
-![alt_text](imgs/12.png)
+![alt_text](imgs/1-1i-a.png)
 
 
-c) 
+b) Sim é um IP do CloudFlare, assim é utilizado por vários outros serviços.
+Esses podem ser encontrados fazendo um reverse IP Lookup (https://hackertarget.com/reverse-ip-lookup/ utilizando o IP 104.21.57.232)
 
-![alt_text](imgs/13.png)
 
+c) Via o nmap -O não é possível ter certeza do OS, ele acredita ser o British Gas GS-Z3 data logger
 
+![alt_text](imgs/1-1i-c1.png)
+
+Mas ao pingar o site, o ttl é de 52, indicando ser linux, mas mesmo assim por ser distante de 64 não podemos ter certeza.
+
+![alt_text](imgs/1-1i-c2.png)
+
+Mas ao olhar no seu histórico de Hospedagem é possível ver que o servidor roda Linux com Apache
+
+![alt_text](imgs/1-1i-c3.png)
 d) 
 
 ![alt_text](imgs/14.png)
