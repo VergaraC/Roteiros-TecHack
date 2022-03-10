@@ -1,20 +1,22 @@
 import socket
 
-ip = input("Enter the IP ADDRESS to be scanned: ")
+ip = input("IP a ser eescaneado: ")
 
-start_port = int(input("Enter the start port: "))
-end_port = int(input("Enter the end port: "))
+port1 = int(input("Primeiro Port: "))
+port2 = int(input("Último Port (até 65535): "))
+print("Começando Scan no IP ", ip)
+print(" ")
+print(" ")
 
-def port_scanner():
-	for i in range(start_port, end_port):
-		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		try:
-			if s.connect_ex((ip, i)) == 0:
-				service = socket.getservbyport(i, "tcp")
-				print(f"service {service} running on port {i}")
-		except:
-			pass
-		s.close()
-	print("other ports are closed")
-		
-port_scanner()
+for i in range(port1, port2):
+	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	try:
+		if s.connect_ex((ip, i)) == 0:
+			print(f"Port {i} is open")
+			service = socket.getservbyport(i, "tcp")
+			print(f"service {service} running on port {i}")
+	except:
+		pass
+	s.close()
+#print("other ports are closed")
+	
