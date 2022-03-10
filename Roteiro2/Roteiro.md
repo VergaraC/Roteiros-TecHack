@@ -6,11 +6,15 @@
 1.1a)
 ![alt_text](imgs/1-1a.png)
 
+10.0.2.4
+
+
 1.1b)
 ![alt_text](imgs/1-1b.png)
 
 1.1c) 
 
+nmap -O 10.0.2.4
 ![alt_text](imgs/1-1c.png)
 
 
@@ -94,18 +98,37 @@ c) Via o nmap -O não é possível ter certeza do OS, ele acredita ser o British
 
 ![alt_text](imgs/1-1i-c1.png)
 
-Mas ao pingar o site, o ttl é de 52, indicando ser linux, mas mesmo assim por ser distante de 64 não podemos ter certeza.
+Mas ao pingar o site, o ttl é de 52, indicando ser linux.
 
 ![alt_text](imgs/1-1i-c2.png)
 
-Mas ao olhar no seu histórico de Hospedagem é possível ver que o servidor roda Linux com Apache
+Ao olhar no seu histórico de Hospedagem é possível ver que o servidor roda Linux com Apache.
 
 ![alt_text](imgs/1-1i-c3.png)
 d) 
 
-![alt_text](imgs/14.png)
+![alt_text](imgs/1-1i-d1.png)
+![alt_text](imgs/1-1i-d2.png)
+![alt_text](imgs/1-1i-d3.png)
+![alt_text](imgs/1-1i-d4.png)
+![alt_text](imgs/1-1i-d5.png)
 
+e)Sim, CloudFlare e Wordfence
+
+![alt_text](imgs/1-1i-e.png)
+
+f) Sim:
+
+rodolfoavelino.com.br.	300	IN	MX 10	mail.rodolfoavelino.com.br
 
 1.1j) 
 
-![alt_text](imgs/15.png)
+![alt_text](imgs/1-1j.png)
+
+Um dos CVEs comum é CVE-2018-10070 com rating de 7.5 onde é enviado uma FTP request com vários "/0" impossibilitando de receber novas requests FTP e fazendo o router fazer um reboot em 10 minutos.
+
+https://nvd.nist.gov/vuln/detail/CVE-2018-10070
+
+Outro é o CVE-2019-19296 com rating de 8.1, que em servers SiVMS/SiNVR Video Server onde um usuário qualquer pode baixar arquivos do servidor
+
+https://nvd.nist.gov/vuln/detail/CVE-2019-19296
