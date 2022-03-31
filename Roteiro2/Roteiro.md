@@ -69,12 +69,12 @@ CVE-2010-1169   8.5     https://vulners.com/cve/CVE-2010-1169
 
 a) 104.16.44.99
 
-![alt_text](imgs/1-1ha.png)
+![alt_text](imgs/1-1h-a.png)
 
 
 b) CloudFlare, mostrado no comando acima e no abaixo
 
-![alt_text](imgs/1-1hb.png)
+![alt_text](imgs/1-1h-b.png)
 
 
 c) Sim, há um servidor de email no domínio: mail.ietf.org no IP 4.31.198.44 
